@@ -1,0 +1,110 @@
+<html>  
+ <head>  
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/buttons.css">
+   <script src="http://code.jqurey.com/jquery-1.10.1.min.js"></script>
+   <script type="text/javascript src='js/buttons.js"></script>
+   <meta charset = "UTF-8">  
+   <title>Show The Time</title>  
+  <style>
+    table {
+    width:100%;
+}
+  table, th, td {  
+      border: 2px solid black;  
+      border-collapse: collapse;  
+      padding: 10px;
+  }  
+      
+  body {background-color:lightgray;}  
+  h1   {color:lightgray;}  
+    
+    
+  p  {  
+      color: red;  
+      font-family: courier;  
+      font-size: 160%;  
+  }  
+    
+  p {  
+      border: 1px solid black;  
+      padding: 10px;  
+  }  
+   #header { 
+     background-color:black; 
+     color:white; 
+     text-align:center; 
+     padding:1px; 
+ } 
+ #nav { 
+     line-height:30px; 
+     background-color:#eeeeee; 
+     height:400px; 
+     width:100px; 
+     float:left; 
+     padding:5px; 
+ } 
+ #section { 
+     width:350px; 
+     float:left; 
+     padding:10px; 
+ } 
+ #footer { 
+     background-color:black; 
+     color:white; 
+     clear:both; 
+     text-align:center; 
+     padding:5px; 
+ } 
+  
+    
+  </style>  
+ 
+ <script type="text/javascript">
+
+        var jsImg =new Array("首頁1.jpg","首頁2.jpg","首頁3.jpg","首頁4.jpg");
+        var jsImg_len = jsImg.length;  
+        var i=2;                      
+        setInterval("sequentialImg()",2000);
+        function sequentialImg(){  
+            document.getElementById("my_div").innerHTML  = "<img src='"+jsImg[i]+"' width=1400 height=550>";        
+                i++;
+                if(i>=jsImg_len)  i=0;
+        }
+</script>
+   
+  </head>  
+   
+   
+  <body>  
+
+ 
+ <div id="header"> 
+ <h1>M o v i e   H o t</h1> 
+ </div> 
+
+
+ <table border="1" style="width:100% ;text-align:center ; color:red ">
+  <tr>
+     <td style="font-size:20px"><a class="button button-block button-rounded button-caution button-large" href="首頁.html">&nbsp&nbsp&nbsp回首頁&nbsp&nbsp&nbsp</a></td>
+    <td style="font-size:20px"><a class="button button-block button-rounded button-caution button-large" href="現正熱映喜劇.html">現正熱映電影</a></td>
+    <td style="font-size:20px"><a class="button button-block button-rounded button-caution button-large" href="即將上映喜劇.html">即將上映電影</a></td>
+  </tr>
+ </table>
+
+ 
+ 
+ <div id="section"> 
+<div id="my_div" ></div>
+ </div> 
+ 
+ 
+ <div id="footer"> 
+ 歡迎光臨 
+ </div> 
+
+ 
+
+
+ </body>  
+ </html>
